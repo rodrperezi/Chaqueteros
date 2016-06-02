@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Sensing</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="imagenes.css">
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-social.css">	
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>$(function(){
+        $("#includedContent").load("carousel.html");
+	$("#includedStaff").load("staff.html");
+    });
+    </script>
+
+    <script type='text/javascript'>//<![CDATA[ 
+	$(window).load(function(){<!--  w w w .  j av a  2  s . c om-->
+	$(function() {
+	    var navbarOffset = $(".navbar").height() + 10;
+	    var shiftWindow = function() { scrollBy(0, -navbarOffset); };
+	    window.addEventListener("hashchange", shiftWindow);
+	    if (window.location.hash) shiftWindow();
+	});
+	$("a[href^='#']").on('click', function(e) {
+	   e.preventDefault();
+	   var hash = this.hash;
+   	$('html, body').animate({
+       		scrollTop: $(this.hash).offset().top - 60
+     	}, 300, function(){
+         	window.location.hash = hash;
+     	});
+	});
+	});//]]>  
+</script>
+
+</head>
+<body>
+<header class="container">
+    <div class="row">
+
+        <img src="imagenes/logo5.png">
+
+        <nav class="navbar barra col-md-10 text-right">
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">INICIO</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">NOSOTROS
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#nosotros1">¿Quienes somos?</a></li>
+                            <li><a href="#">Mision</a></li>
+                            <li><a href="#">Vision</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#proyectos">PROYECTOS</a></li>
+                    <li><a href="#">EXPLORADOR</a></li>
+                    <li><a href="#noticias">NOTICIAS</a></li>
+                    <li><a href="#galeria">GALERIA</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+</header>
+
+<!--
+<section class="jumbotron">
+    <div class="container">
+        <div class="row text-center">
+            <h2>Smart Sensing</h2>
+            <h3>EN CONSTRUCCION</h3>
+        </div>
+    </div>
+</section>
+-->
+
+<!--SE INSERTA EL CARROUSEL-->
+<div id="includedContent"></div>
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="proyectos">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Proyectos <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <form action="/quotes" method="POST">
+           <input type="text" placeholder="name" name="name">
+           <input type="text" placeholder="quote" name="quote">
+           <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="noticias">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Noticias <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="galeria">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Galería <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+<div id="includedStaff"></div>
+
+<script src="https://use.fonticons.com/d0066468.js"></script>
+
+<footer class="container">
+    <div class="row">
+        <p class="col-sm-4">&copy; 2016 Smart Sensing</p>
+	    
+            <!--<li class="col-sm-1"><img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg"></li>-->	
+	<div class="col-sm-8 text-right">
+	    <a class="col-sm-1 btn btn-social-icon btn-lg btn-twitter">
+    		<span class="fa fa-twitter"></span>
+            </a>
+            <a class="col-sm-1"></a>
+            <a class="col-sm-1 btn btn-social-icon btn-lg btn-facebook text-right">
+    		<span class="fa fa-facebook-official"></span>
+            </a>
+	    <a class="col-sm-1"></a>
+            <a class="col-sm-1 btn btn-social-icon btn-lg btn-github text-right">
+    		<span class="fa fa-github"></span>
+            </a>
+            <a class="col-sm-1"></a>
+	    <a class="col-sm-1 btn btn-social-icon btn-lg btn-google text-right">
+    		<span class="fa fa-google-plus"></span>
+            </a>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
